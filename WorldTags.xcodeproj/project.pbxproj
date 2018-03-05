@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A08BB88BE27038C24058F92 /* Pods_WorldTagsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9758FB428E1342A3E36280F2 /* Pods_WorldTagsTests.framework */; };
 		6640F34A204DCA48004E5EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640F349204DCA48004E5EBE /* AppDelegate.swift */; };
 		6640F34C204DCA48004E5EBE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6640F34B204DCA48004E5EBE /* art.scnassets */; };
 		6640F34E204DCA48004E5EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640F34D204DCA48004E5EBE /* ViewController.swift */; };
@@ -44,8 +43,6 @@
 		6640F362204DCA48004E5EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78B988633992A6124D4D2AEC /* Pods_WorldTags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldTags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9758FB428E1342A3E36280F2 /* Pods_WorldTagsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldTagsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A31383E44319E56E14DD05BA /* Pods-WorldTagsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTagsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTagsTests/Pods-WorldTagsTests.release.xcconfig"; sourceTree = "<group>"; };
-		C02E0C566A0219E8E1E29BD6 /* Pods-WorldTagsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldTagsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorldTagsTests/Pods-WorldTagsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A08BB88BE27038C24058F92 /* Pods_WorldTagsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +121,6 @@
 			children = (
 				27B813C72DCE4390C29C848E /* Pods-WorldTags.debug.xcconfig */,
 				084A0D6B0D0AEF503C988AAE /* Pods-WorldTags.release.xcconfig */,
-				C02E0C566A0219E8E1E29BD6 /* Pods-WorldTagsTests.debug.xcconfig */,
-				A31383E44319E56E14DD05BA /* Pods-WorldTagsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -158,12 +152,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6640F368204DCA48004E5EBE /* Build configuration list for PBXNativeTarget "WorldTagsTests" */;
 			buildPhases = (
-				B69D2AE2DE3F80FA46892708 /* [CP] Check Pods Manifest.lock */,
 				6640F358204DCA48004E5EBE /* Sources */,
 				6640F359204DCA48004E5EBE /* Frameworks */,
 				6640F35A204DCA48004E5EBE /* Resources */,
-				FDF51BB945DF8F86CF9CF790 /* [CP] Embed Pods Frameworks */,
-				F54C3CD9098C531D25C1A262 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,61 +267,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WorldTags/Pods-WorldTags-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldTags/Pods-WorldTags-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B69D2AE2DE3F80FA46892708 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WorldTagsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F54C3CD9098C531D25C1A262 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldTagsTests/Pods-WorldTagsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDF51BB945DF8F86CF9CF790 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorldTagsTests/Pods-WorldTagsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -524,7 +470,6 @@
 		};
 		6640F369204DCA48004E5EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C02E0C566A0219E8E1E29BD6 /* Pods-WorldTagsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,7 +487,6 @@
 		};
 		6640F36A204DCA48004E5EBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A31383E44319E56E14DD05BA /* Pods-WorldTagsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
