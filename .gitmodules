@@ -1,0 +1,3 @@
+[submodule "ARKit-CoreLocation"]
+	path = ARKit-CoreLocation
+	url = git@via-github:avihu-via/ARKit-CoreLocation.git
